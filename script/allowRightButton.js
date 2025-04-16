@@ -14,7 +14,24 @@ $(document).on("contextmenu", function(event) {
   }
 })
 
-$('#customCopyMenu .menu-item').on('click', function() {
+// $('#customCopyMenu .menu-item').on('click', function() {
+//   const action = $(this).data('action');
+//   console.log('action => '+ action)
+// })
+
+$(document).on('click', '#customCopyMenu .menu-item', function() {
   const action = $(this).data('action');
-  console.log('action => '+ action)
+  console.log('action => ' + action);
+
+  if (action == 'copy') {
+    console.log('copy to clipboard');
+  } else if (action == 'paste') {
+    console.log('paste from clipboard');
+  } else {
+    console.log('unknown action');
+  }
+});
+
+$(document).on('click', function() {
+  $('#customCopyMenu').fadeOut(100);
 })
