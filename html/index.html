@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous">
+    </script>
+  <script src="../script/dragNdrop.js"></script>
+  <script src="../script/copyNpaste.js"></script>
+  <script src="../script/preventRightButton.js"></script>
+  <script src="../script/allowRightButton.js"></script>
+
+  <link rel="stylesheet" href="../style/main.css">
+  <link rel="stylesheet" href="../style/draNdrop.css">
+  <link rel="stylesheet" href="../style/copyNpaste.css">
+  <link rel="stylesheet" href="../style/allowRightButton.css">
+</head>
+
+<!--
+  -- 方法１）右クリック禁止
+  ① ページ全体：<body oncontextmenu="return false">
+  ② 指定のイメージ：<img src="画像のURL" oncontextmenu="return false;">
+-->
+
+<!--<body oncontextmenu="return false"> -->
+
+<body>
+  <div id="wrap">
+    <div id="contents">
+      <div class="section">
+        <h1 class="section_title">Drag and Drop</h1>
+        <div id="drop-area">
+          <p>ここにファイルをドロップするか、ボタンで選択してください</p>
+          <input type="file" id="fileInput" hidden>
+          <button onclick="fileInput.click()">ファイルを選択</button>
+          <div id="file-list"></div>
+        </div>
+      </div>
+      <div class="section">
+        <h1 class="section_title">Copy and Paste</h1>
+        <div class="copypaste">
+          <div id="copypaste_area">
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <h1 class="section_title">Click Right Mouse Button</h1>
+        <div class="allowrightbutton">
+          <div id="allowrightbutton_area">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul id="customCopyMenu" style="display: none;">
+    <li class="menu-item" data-action="copy">Copy</li>
+    <li class="menu-item" data-action="paste">Paste</li>
+  </ul>
+</body>
+
+</html>

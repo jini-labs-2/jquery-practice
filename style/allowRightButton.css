@@ -1,0 +1,30 @@
+.allowrightbutton {
+  width: 500px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: burlywood;
+}
+
+#allowrightbutton_area {
+  width: inherit;
+  height: inherit;
+}
+
+#customCopyMenu {
+  position: absolute;
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+#customCopyMenu .menu-item {
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+#customCopyMenu .menu-item:hover {
+  background-color: #f0f0f0;
+}

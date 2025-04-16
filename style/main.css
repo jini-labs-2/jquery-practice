@@ -1,0 +1,21 @@
+#wrap {
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  margin: 2rem 0 0 2rem;
+}
+
+a {
+  padding: 1rem 1rem;
+  border: 1px solid #bbb;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.section_title {
+  text-align: center;
+}
