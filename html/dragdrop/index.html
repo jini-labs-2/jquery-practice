@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous">
+    </script>
+  <script src="./dragNdrop.js"></script>
+
+  <link rel="stylesheet" href="../../style/main.css">
+  <link rel="stylesheet" href="./draNdrop.css">
+</head>
+
+<!--
+  -- 方法１）右クリック禁止
+  ① ページ全体：<body oncontextmenu="return false">
+  ② 指定のイメージ：<img src="画像のURL" oncontextmenu="return false;">
+-->
+
+<!--<body oncontextmenu="return false"> -->
+
+<body>
+  <div id="wrap">
+    <div id="contents">
+      <div class="section">
+        <h1 class="section_title">Drag and Drop</h1>
+        <div id="drop-area">
+          <p>ここにファイルをドロップするか、ボタンで選択してください</p>
+          <input type="file" id="fileInput" hidden>
+          <button onclick="fileInput.click()">ファイルを選択</button>
+          <div id="file-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

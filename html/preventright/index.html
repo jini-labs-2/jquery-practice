@@ -8,23 +8,23 @@
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous">
     </script>
-
-  <link rel="stylesheet" href="../style/main.css">
+  <script src="./preventRightButton.js"></script>
+  <link rel="stylesheet" href="../../style/main.css">
 </head>
+
+<!--
+  -- 方法１）右クリック禁止
+  ① ページ全体：<body oncontextmenu="return false;">
+  ② 指定のイメージ：<img src="画像のURL" oncontextmenu="return false;">
+-->
+
+<!-- <body oncontextmenu="return false;"> -->
 
 <body>
   <div id="wrap">
     <div id="contents">
       <div class="section">
-        <a href="./dragdrop/">
-          <h3 class="section_title">Drag and Drop</h3>
-        </a>
-        <a href="./copypaste/">
-          <h3 class="section_title">Copy and Paste</h3>
-        </a>
-        <a href="./preventright/">
-          <h3 class="section_title">Click Right Mouse Button</h3>
-        </a>
+        <h1 class="section_title">Click Right Mouse Button</h1>
       </div>
     </div>
   </div>
