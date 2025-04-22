@@ -14,28 +14,39 @@
   <link rel="stylesheet" href="./draNdrop.css">
 </head>
 
-<!--
-  -- 方法１）右クリック禁止
-  ① ページ全体：<body oncontextmenu="return false">
-  ② 指定のイメージ：<img src="画像のURL" oncontextmenu="return false;">
--->
-
-<!--<body oncontextmenu="return false"> -->
-
 <body>
   <div id="wrap">
     <div id="contents">
       <div class="section">
         <h1 class="section_title">Drag and Drop</h1>
-        <div id="drop-area">
+        <div class="drop-area" id="drop-area-01" data-file-list-id="file-list-01">
           <p>ここにファイルをドロップするか、ボタンで選択してください</p>
-          <input type="file" id="fileInput" hidden>
-          <button onclick="fileInput.click()">ファイルを選択</button>
-          <div id="file-list"></div>
+          <input type="file" class="file-input" id="fileInput-01" hidden>
+          <button onclick="$('#fileInput-01').click()">ファイルを選択</button>
+          <div class="file-list" id="file-list-01"></div>
+        </div>
+      </div>
+      <hr>
+      <div class="section">
+        <h1 class="section_title">Drag and Drop 2nd</h1>
+        <div class="drop-area" id="drop-area-02" data-file-list-id="file-list-02">
+          <p>ここにファイルをドロップするか、ボタンで選択してください</p>
+          <input type="file" class="file-input" id="fileInput-02" hidden>
+          <button onclick="$('#fileInput-02').click()">ファイルを選択</button>
+          <div class="file-list" id="file-list-02"></div>
+        </div>
+      </div>
+      <hr>
+      <div class="section">
+        <h1 class="section_title">Drag and Drop 3rd</h1>
+        <div class="drop-area" id="drop-area-03" data-file-list-id="file-list-03">
+          <p>ここにファイルをドロップするか、ボタンで選択してください</p>
+          <input type="file" class="file-input" id="fileInput-03" hidden>
+          <button onclick="$('#fileInput-03').click()">ファイルを選択</button>
+          <div class="file-list" id="file-list-03"></div>
         </div>
       </div>
     </div>
-  </div>
 </body>
 
 </html>
