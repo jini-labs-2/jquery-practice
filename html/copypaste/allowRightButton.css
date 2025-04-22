@@ -5,7 +5,7 @@
   background-color: burlywood;
 }
 
-#allowrightbutton_area {
+.allowrightbutton_area {
   width: inherit;
   height: inherit;
 }
@@ -17,7 +17,7 @@
   margin: 0;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 #customCopyMenu .menu-item {

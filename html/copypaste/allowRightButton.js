@@ -1,8 +1,5 @@
 $(document).on("contextmenu", function(event) {
-  const allowedId = 'allowrightbutton_area';
-  //const allowedId = 'myElement';
-
-  if ($(event.target).closest('#' + allowedId).length) {
+  if ($(event.target).closest('.allowrightbutton_area').length) {
     event.preventDefault();
     $('#customCopyMenu')
       .css({top: event.pageY, left: event.pageX})
@@ -10,14 +7,8 @@ $(document).on("contextmenu", function(event) {
   } else {
     $('#customCopyMenu').fadeOut(100);
     event.preventDefault();
-
   }
 })
-
-// $('#customCopyMenu .menu-item').on('click', function() {
-//   const action = $(this).data('action');
-//   console.log('action => '+ action)
-// })
 
 $(document).on('click', '#customCopyMenu .menu-item', function() {
   const action = $(this).data('action');
