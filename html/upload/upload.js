@@ -1,42 +1,40 @@
 function onClickSelectFile() {
-  document.getElementById('hksFile').click();
+  $('#hksFile').click();
 }
 
 function onChangeFile() {
-  const fileInput = document.getElementById('hksFile');
-  const display = document.getElementById('displayHksFile');
-  const errorMsg = document.getElementById('errorMsg');
+  const $fileInput = $('#hksFile');
+  const $display = $('#displayHksFile');
+  const $errorMsg = $('#errorMsg');
 
-  if (fileInput.files.length > 0) {
-    display.value = fileInput.files[0].name;
-    errorMsg.textContent = '';
-  } else {
-    display.value = '';
-  }
+  const files = $fileInput[0].files;
+  $display.val(files[0].name);
+  $errorMsg.text('');
 }
 
 function onClickUpload() {
-  const fileInput = document.getElementById('hksFile');
-  const errorMsg = document.getElementById('errorMsg');
+  const $fileInput = $('#hksFile');
+  const $errorMsg = $('#errorMsg');
 
-  if (fileInput.files.length === 0) {
-    errorMsg.textContent = 'selct file.';
+  const files = $fileInput[0].files;
+  if (files.length === 0) {
+    $errorMsg.text('selct file.');
     return;
   }
 
-  const file = fileInput.files[0];
+  const file = files[0];
   const fs = file.size;
 
   if (fs < 1) {
-    errorMsg.textContent = 'file size is 0.';
+    $errorMsg.text('file size is 0.');
     return;
   }
 
   if (fs > 1024) {
-    errorMsg.textContent = 'file size is too big.';
+    $errorMsg.text('file size is too big.');
     return;
   }
   
-  errorMsg.textContent = '';
-  document.getElementById('uploadForm').onsubmit();
+  $errorMsg.text('');
+  $('#uploadForm').onsubmit();
 }
